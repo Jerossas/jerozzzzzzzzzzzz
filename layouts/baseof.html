@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body>
+    <main>
+        {{ block "main" . }}
+            <h1>Contenido predeterminado</h1>
+            <p>Este es el contenido predeterminado de la página.</p>
+        {{ end }}
+    </main>
+</body>
+</html>
