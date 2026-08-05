@@ -1,0 +1,16 @@
+
+@font-face {
+    font-family: 'crackman';
+    src: url('{{ (resources.Get "fonts/crackman.regular.woff2" | resources.Fingerprint).RelPermalink }}') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'first-time-writing';
+    src: url('{{ (resources.Get "fonts/first-time-writing.regular.woff2" | resources.Fingerprint).RelPermalink }}') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
