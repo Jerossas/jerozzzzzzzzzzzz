@@ -1,3 +1,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ .Site.Title }}</title>
+
+{{ $scss := resources.Get "css/main.scss" }}
+
+{{ if $scss }}
+    {{ $css := $scss | css.Sass }}
+    {{ $css := $css | resources.ExecuteAsTemplate "css/main.css" . }}
+    {{ $secureCSS := $css | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $secureCSS.RelPermalink }}" integrity="{{ $secureCSS.Data.Integrity }}">
+{{ end }}
