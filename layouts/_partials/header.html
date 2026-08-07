@@ -1,11 +1,11 @@
-<header class="">
-    <div class="">
-        <h1 class="site-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+<header class="site-header">
+    <div class="site-header__inner container">
+        <div class="site-header__logo"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></div>
 
-        <nav>
-            <ul>
+        <nav class="site-header__nav nav">
+            <ul class="nav__list">
                 {{ range .Site.Menus.main }}
-                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    <li class="nav__item"><a class="nav__link" href="{{ .URL }}">{{ .Name }}</a></li>
                 {{ end }}
             </ul>
         </nav>
